@@ -1,0 +1,16 @@
+<nav class="nav navbar-nav">
+   <div class="container">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="#">My Profile</a></li>
+        <li><a href="#">My History</a></li>
+        <li><a href="#">Add Doctor</a></li>
+        <li><a href="#">Appointments</a></li>
+        <li><a href="#">FAQ</a></li>
+     </ul>
+   </div>
+</nav>
+
+ 
+ <div class="well" *ngIf="authService.getUser()"> Logged in as <b>{{ authService.getUser() }}</b>
+    <a href (click)="logout()">Log out</a> 
+    </div>

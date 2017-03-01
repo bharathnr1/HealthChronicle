@@ -1,0 +1,40 @@
+.profile-sidebar {
+ 
+   margin-left: 0; 
+   padding: 10px 0 10px 0;
+  
+   background: #fff;
+
+   border-style: solid;
+   border-radius: 30px; 
+}
+
+
+
+.profile-fields {
+  
+    text-align: left;
+  
+    margin-top: 20px;
+
+    height: 200px;
+}
+
+
+.profile-userpic img {
+margin-left:75px; width: 50%;
+  height: 50%;
+  border-radius: 50% !important;
+}
+
+
+
+.profile-content {
+ border-style:solid; padding: 0;
+  background: #fff;
+  min-height: 600px;
+}
+
+.profile-sidebar .profile-fields ul li{ text-align: center;}
+
+.btn { margin-bottom: 100px;}
