@@ -1,0 +1,39 @@
+.profile-sidebar {
+
+   margin-left: 0;
+   padding: 10% 0 10% 0;
+
+   background: #fff;
+
+   border-style: solid;
+   border-radius: 15%;
+   height: 400px;
+   border-width: thin;
+}
+
+
+
+.profile-fields {
+
+    text-align: center;
+
+    margin-top: 10%;
+
+
+}
+
+.profile-userpic img {
+display:block; margin:auto; width: 50%;
+  height: 50%;
+  border-radius: 50% !important;
+}
+
+.profile-content {
+ border-style:solid; border-width: thin;  padding: 50px;
+  background: #fff;
+  height: 500px;
+}
+
+.profile-sidebar .profile-fields form input{ text-align:center; border: none;}
+
+.btn{margin-right: 10%}

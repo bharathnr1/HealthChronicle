@@ -1,0 +1,19 @@
+<div class="container" >
+    <h1 class="major" >Login To Begin</h1>
+    <form [formGroup]="addloginForm" (ngSubmit)="onSubmit()">
+     <div class="row">
+      <div class="form-group" class="col-xs-6">
+        <label for="name">Username</label>
+        <input type="text" class="form-control big" name="email" placeholder="Your UserId"  formControlName="email" >
+          
+      </div>
+     </div>
+     <div class="row">
+      <div class="form-group"class="col-xs-6">
+        <label for="Password">Password</label>
+        <input type="Password" class="form-control big" name="password" placeholder="Your Password" formControlName="password">
+      </div>
+     </div>
+      <button type="submit" class="btn bttn1 btn-primary">Login</button>
+    </form>
+</div>
