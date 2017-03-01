@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+   <div class="container">
+     <div class="navbar-header">
+       <a class="navbar-brand" routerLink="/home">HealthChronicle</a>
+      </div>
+     <ul class="nav navbar-nav">
+        <li><a [routerLink]="['myprofile']">My Profile</a></li>
+        <li><a routerLink="/home">My History</a></li>
+        <li><a routerLink="/home">Add Doctor</a></li>
+        <li><a routerLink="/home">Appointments</a></li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+          <p *ngIf="authService.getUser()" class="navbar-text">Logged in as <b>{{ authService.getUser() }}</b>.</p>
+          <li><a class="small" href (click)="logout()">Log out</a></li>
+     </ul>
+   </div>
+</nav>
+  <!--  <nav class="navbar">
+       <div class="container-fluid">
+         <ul class="nav navbar-nav">
+            <a [routerLink]="['myprofile']">MyProfile</a>
+            <a [routerLink]="['myhistory']">MyHistory</a>
+          </ul>
+      </div>
+    </nav> -->
+<!--<nav class="navbar">
+ <div class="container">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="#">HealthChronicle</a>
+    </div>
+  <ul class="nav navbar-nav">
+   <li class="active"><a [routerLink]="['myprofile']"]>My Profile</a></li>
+   <li><a [routerLink]="['myhistory']">My History</a></li>
+   <li><a href="#">Add Doctor</a></li>
+   <li><a href="#">Appointments</a></li>
+
+  </ul>
+ </div>
+</nav> -->
+
+
+    <router-outlet></router-outlet>
+
+
+ <!-- <div class="well" *ngIf="authService.getUser()"> Logged in as <b>{{ authService.getUser() }}</b>
+    <a href (click)="logout()">Log out</a>
+  </div> -->
