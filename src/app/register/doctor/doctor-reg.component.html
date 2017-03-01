@@ -1,0 +1,104 @@
+<div class="container">
+                <h1 class="major" >Hello Doctor!!</h1>
+                 <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+                 <div class="row">
+                     <div class="form-group" class="col-xs-6">
+                          <label for="firstname">First Name</label>
+                                 <input type="text" class="form-control big"  placeholder="first Name" 
+                                 name="firstname"  formControlName="firstname"   >
+
+                     </div>
+                </div>
+
+               <div class="row">
+                    <div class="form-group" class="col-xs-6">
+                         <label for="lastname">Last Name</label>
+                                 <input type="text" class="form-control big" placeholder="Last Name" 
+                                  name="lastname" formControlName="lastname" >
+
+                    </div>
+               </div>
+
+              <div class="row">
+                   <div class="form-group" class="col-xs-6">
+                         <label for="email">Email</label>
+                                 <input type="text" class="form-control big" placeholder="Your Email"
+                                  name="email" formControlName="email" >
+                          <div *ngIf="email.hasError('invalidEmail') && email.touched" class="alert alert-danger">
+                            This Email Cannot Exist </div>
+                  </div>
+             </div>
+                <div class="row">
+                   <div class="form-group" class="col-xs-6">
+                         <label for="Age">Age</label>
+                                 <input type="text" class="form-control big" placeholder="Your Age"
+                                  name="age" formControlName="age">
+                  </div>
+             </div>
+
+             <div class="row">
+                   <div class="form-group" class="col-xs-6">
+                         <label for="medicalid">Medical id</label>
+                                 <input type="text" class="form-control big" placeholder="Your Medical id"
+                                  name="medicalid" formControlName="medicalid" >
+                  </div>
+             </div>
+
+             <div class="row">
+                   <div class="form-group" class="col-xs-6">
+                         <label for="registrationboard">Registration Board</label>
+                                 <input type="text" class="form-control big" placeholder="Your Registration board"
+                                  name="registrationboard" formControlName="registrationboard" >
+                  </div>
+             </div>
+             <div class="row">
+                   <div class="form-group" class="col-xs-6">
+                         <label for="qualification">Qualification</label>
+                                 <input type="text" class="form-control big" placeholder="Your Qualification"
+                                  name="qualification" formControlName="qualification" >
+                  </div>
+             </div>
+              
+            
+            <div class="row">
+                 <div class="form-group" class="col-xs-6">
+                      <label for="pass">Password</label>
+                             <input type="Password" class="form-control big" placeholder="Type a Password"
+                              name="pass" formControlName="pass" minlength="8">
+                  <div *ngIf="!pass.valid &&  pass.touched" class="alert alert-danger">Password has to be 8 characters long</div>
+                  </div>
+            </div>
+
+           <div class="row">
+                <div class="form-group" class="col-xs-6">
+                     <label for="passcon">Password</label>
+                            <input type="Password" class="form-control big"  placeholder="Confirm Password" 
+                           name="passcon" formControlName="passcon" >
+                      <div *ngIf="passcon.hasError('notEquivalent') && passcon.touched" class="alert alert-danger">
+                            Both passwords Has To Match </div>
+                </div>
+          </div>
+
+          <div class="row">
+               <div class="form-group" class="col-xs-6">
+                     <label for="sex">Gender</label>
+                             <select class="form-control big" formControlName="sex" name="sex">
+                            <option *ngFor="let sex of genders" [value]="sex">{{sex}}</option>
+                             </select>
+               </div>
+          </div>
+
+         <div class="row">
+              <div class="form-group" class="col-xs-6">
+                   <label for="phone">Contact Number</label>
+                          <input type="text" class="form-control big"  placeholder="Enter your number"
+                          name="phone" formControlName="phone"  >
+                        <div *ngIf="phone.hasError('invalidPhone') && phone.touched" class="alert alert-danger">
+                            This Phone No must be 10 digits </div>
+              </div>
+          </div>
+
+                       <button type="submit" class="btn bttn1 btn-success" [disabled]="!addDoctorForm.valid">Submit</button>
+                    
+    </form>
+</div>
